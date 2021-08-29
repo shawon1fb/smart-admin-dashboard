@@ -1,3 +1,4 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smart_admin_dashboard/core/constants/color_constants.dart';
 import 'package:smart_admin_dashboard/core/utils/colorful_tag.dart';
 import 'package:smart_admin_dashboard/models/recent_user_model.dart';
@@ -30,10 +31,10 @@ class RecentUsers extends StatelessWidget {
               width: double.infinity,
               child: DataTable(
                 horizontalMargin: 0,
-                columnSpacing: defaultPadding,
+                columnSpacing:5.0,//?? defaultPadding,
                 columns: [
                   DataColumn(
-                    label: Text("Name Surname"),
+                    label: Text("Name "),
                   ),
                   DataColumn(
                     label: Text("Applied Position"),
@@ -74,7 +75,7 @@ DataRow recentUserDataRow(RecentUser userInfo, BuildContext context) {
               size: 35,
               backgroundColor: Colors.white,
               textColor: Colors.white,
-              fontSize: 14,
+              fontSize: 12,//ScreenUtil().setSp(12.0),
               upperCase: true,
               numberLetters: 1,
               shape: Shape.Rectangle,
