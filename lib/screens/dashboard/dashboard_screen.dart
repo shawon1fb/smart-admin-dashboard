@@ -36,13 +36,13 @@ class DashboardScreen extends StatelessWidget {
                         RecentUsers(),
                         SizedBox(height: defaultPadding),
                         RecentDiscussions(),
-                        if (Responsive.isMobile(context))
+                        if (!Responsive.isDesktop(context))
                           SizedBox(height: defaultPadding),
-                        if (Responsive.isMobile(context)) UserDetailsWidget(),
+                        if (!Responsive.isDesktop(context)) UserDetailsWidget(),
                       ],
                     ),
                   ),
-                  if (!Responsive.isMobile(context))
+                  if (Responsive.isDesktop(context))
                     SizedBox(width: defaultPadding),
                   // On Mobile means if the screen is less than 850 we dont want to show it
                   if (Responsive.isDesktop(context))
